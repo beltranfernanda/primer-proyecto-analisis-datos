@@ -1,4 +1,4 @@
-const labels = [
+const labelsLateralidad = [
     'January',
     'February',
     'March',
@@ -7,8 +7,8 @@ const labels = [
     'June',
   ];
   
-  const data = {
-    labels: labels,
+  const dataLateralidad = {
+    labels: labelsLateralidad,
     datasets: [{
       label: 'My First dataset',
       backgroundColor: 'rgb(255, 99, 132)',
@@ -17,13 +17,15 @@ const labels = [
     }]
   };
   
-  const config = {
+  const configLateralidad = {
     type: 'line',
-    data: data,
+    data: dataLateralidad,
     options: {}
   };
   
   const myChart = new Chart(
     document.getElementById('lateralidad'),
-    config
+    configLateralidad
   );
+
+  console.log("Desde lateralidad: ", responseService)
