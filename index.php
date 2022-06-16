@@ -14,33 +14,33 @@
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views\histograma\histogramachart.php'; ?>
+          <?php require 'views/histograma/histogramachart.php'; ?>
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
-          <?php require 'views\lateralidad\lateralidadchart.php'; ?>
+          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
         </div>
       </div>
       <!-- Inicio segunda fila-->
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views\lateralidad\lateralidadchart.php'; ?>
+          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
-          <?php require 'views\lateralidad\lateralidadchart.php'; ?>
+          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
         </div>
       </div>
       <!-- Inicio tercera fila-->
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views\lateralidad\lateralidadchart.php'; ?>
+          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
-          <?php require 'views\lateralidad\lateralidadchart.php'; ?>
+          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
         </div>
       </div>
     </div>
