@@ -36,11 +36,11 @@
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
+          <?php require 'views/escolaridad/escolaridadchart.php'; ?>
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
-          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
+          <?php require 'views/posicion/posicionchart.php'; ?>
         </div>
       </div>
     </div>
@@ -60,4 +60,7 @@
   <script src="./public/js/index.js"></script>
   <script src="./public/js/lateralidad.js"></script>
   <script src="./public/js/histograma.js"></script>
+  <script src="./public/js/posicion.js"></script>
+  <script src="./public/js/escolaridad.js"></script>
+
 </html>
