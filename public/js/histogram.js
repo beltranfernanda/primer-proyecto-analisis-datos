@@ -3,7 +3,6 @@ import { rangeAgeModel } from '../../models/rangeAges.js'
 
 const listAges = await getAge(responseService)
 const objectRangeAge = await getAmountAgesRange(listAges)
-console.log(objectRangeAge.map((amountAge) => amountAge.rangeAge))
 
 async function getAge(response) {
   let listAges = []
@@ -70,7 +69,7 @@ const dataHistogram = {
 };
 
 const configHistogram = {
-  type: 'line',
+  type: 'bar',
   data: dataHistogram,
   options: {}
 };
