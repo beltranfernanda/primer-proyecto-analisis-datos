@@ -14,7 +14,7 @@
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views/histograma/histogramachart.php'; ?>
+          <?php require 'views/histogram/histogramchart.php'; ?>
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
@@ -59,7 +59,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./public/js/index.js"></script>
   <script src="./public/js/lateralidad.js"></script>
-  <script src="./public/js/histograma.js"></script>
+  <script type="module" src="./public/js/histogram.js"></script>
   <script src="./public/js/posicion.js"></script>
   <script src="./public/js/escolaridad.js"></script>
 
