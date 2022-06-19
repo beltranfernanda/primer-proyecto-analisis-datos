@@ -57,7 +57,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <!-- Chart js-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./public/js/index.js"></script>
   <script src="./public/js/lateralidad.js"></script>
   <script type="module" src="./public/js/histogram.js"></script>
   <script src="./public/js/posicion.js"></script>

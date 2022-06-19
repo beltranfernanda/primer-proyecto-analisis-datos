@@ -3,7 +3,7 @@ import { rangeAgeModel } from '../../models/rangeAges.js'
 
 const listAges = await getAge(responseService)
 const objectRangeAge = await getAmountAgesRange(listAges)
-getYAxis(objectRangeAge)
+console.log(objectRangeAge.map((amountAge) => amountAge.rangeAge))
 
 async function getAge(response) {
   let listAges = []
@@ -59,18 +59,13 @@ async function setRangesObject(objectRangeAge){
   return objectRangeAge
 }
 
-async function getYAxis(objectRangeAge) {
-
-}
-
-
 const dataHistogram = {
   labels: xAxis,
   datasets: [{
     label: 'Rango de edades',
     backgroundColor: 'rgb(255, 99, 132)',
     borderColor: 'rgb(255, 99, 132)',
-    data: [0, 10, 5, 2, 20, 30, 45],
+    data: objectRangeAge.map((amountAge) => amountAge.amount),
   }]
 };
 
