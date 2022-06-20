@@ -1,6 +1,5 @@
 const ob = responseService.map(item => item.valores[6])
 const razaList = Object.values(ob)
-console.log(ob)
 
 var razaLabels = [];
 var razaData = [];
