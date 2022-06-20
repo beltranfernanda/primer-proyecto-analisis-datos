@@ -56,5 +56,3 @@ const myChartPosicion = new Chart(
     document.getElementById('posicion'),
     configPosicion
 );
-
-console.log("Desde Posicion: ", responseService)
