@@ -40,8 +40,8 @@ const dataEscolaridad = {
     labels: lista,
     datasets: [{
         label: 'Graficar Escolaridad',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 12, 50)',
+        borderColor: 'rgb(255, 12, 50)',
         data: cantidades,
     }]
 };

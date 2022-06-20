@@ -9,6 +9,7 @@ var contador = 1;
 for (let i = 0; i <= posiciones.length; i++) {
     if (posiciones[i] !== undefined) {
         let pos = posiciones[i]['value'];
+        pos = pos.toUpperCase();
         if (lista.includes(pos) === false) {
             lista.push(pos)
         }
@@ -19,7 +20,7 @@ for (let i = 0; i <= posiciones.length; i++) {
 for (let i = 0; i <= posiciones.length; i++) {
     if (posiciones[i] !== undefined) {
         let pos = posiciones[i]['value'];
-        pos.toUpperCase()
+        pos = pos.toUpperCase()
         lista2.push(pos)
         pos = '';
     }
@@ -39,9 +40,9 @@ for(let i = 0; i <= lista2.length; i++){
 const dataPosicion = {
     labels: lista,
     datasets: [{
-        label: 'Graficar Posición',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        label: 'Graficar Psosición',
+        backgroundColor: 'rgb(0, 102, 255)',
+        borderColor: 'rgb(0, 102, 255)',
         data: cantidades,
     }]
 };
