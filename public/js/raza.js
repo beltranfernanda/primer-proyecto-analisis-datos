@@ -43,7 +43,7 @@ const dataRaza = {
 };
 
 const configRaza = {
-    type: 'line',
+    type: 'bar',
     data: dataRaza,
     options: {}
 };
