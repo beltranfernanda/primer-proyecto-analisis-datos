@@ -56,5 +56,3 @@ const myChartEscolaridad = new Chart(
     document.getElementById('escolaridad'),
     configEscolaridad
 );
-
-console.log("Desde Escolaridad: ", responseService)

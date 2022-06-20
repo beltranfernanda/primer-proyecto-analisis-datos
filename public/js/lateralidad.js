@@ -27,5 +27,3 @@ const labelsLateralidad = [
     document.getElementById('lateralidad'),
     configLateralidad
   );
-
-  console.log("Desde lateralidad: ", responseService)
