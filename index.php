@@ -29,7 +29,7 @@
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
-          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
+          <?php require 'views/raza/raza.php'; ?>
         </div>
       </div>
       <!-- Inicio tercera fila-->
@@ -60,6 +60,7 @@
   <script src="./public/js/lateralidad.js"></script>
   <script type="module" src="./public/js/histogram.js"></script>
   <script src="./public/js/posicion.js"></script>
+  <script src="./public/js/raza.js"></script>
   <script src="./public/js/escolaridad.js"></script>
 
 </html>
