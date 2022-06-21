@@ -23,7 +23,7 @@
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
+          <?php require 'views/campanaGauss/campanaGauss.php'; ?>
         </div>
         <!-- Inicio segunda columna-->
         <div class="col">
@@ -57,6 +57,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./public/js/lateralidad.js"></script>
   <script type="module" src="./public/js/histogram.js"></script>
+  <script type="module" src="./public/js/campanaGauss/campanaGauss.js"></script>
   <script src="./public/js/posicion.js"></script>
   <script src="./public/js/raza.js"></script>
   <script src="./public/js/escolaridad.js"></script>
