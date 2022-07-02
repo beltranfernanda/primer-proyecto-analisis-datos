@@ -6,41 +6,10 @@
   </head>
   <body class="bg-light">
     <?php require 'views/navbar/navbar.php'; ?>
+    <?php require 'public/domain/uploadFile.php'; ?>
     <div class="container my-3">
       <h2 class="display-4">Charts</h2>
-      <!-- Inicio primera fila-->
-      <div class="row my-3">
-        <!-- Inicio primer columna-->
-        <div class="col">
-          <?php require 'views/histogram/histogramchart.php'; ?>
-        </div>
-        <!-- Inicio segunda columna-->
-        <div class="col">
-          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
-        </div>
-      </div>
-      <!-- Inicio segunda fila-->
-      <div class="row my-3">
-        <!-- Inicio primer columna-->
-        <div class="col">
-          <?php require 'views/campanaGauss/campanaGauss.php'; ?>
-        </div>
-        <!-- Inicio segunda columna-->
-        <div class="col">
-          <?php require 'views/raza/raza.php'; ?>
-        </div>
-      </div>
-      <!-- Inicio tercera fila-->
-      <div class="row my-3">
-        <!-- Inicio primer columna-->
-        <div class="col">
-          <?php require 'views/escolaridad/escolaridadchart.php'; ?>
-        </div>
-        <!-- Inicio segunda columna-->
-        <div class="col">
-          <?php require 'views/posicion/posicionchart.php'; ?>
-        </div>
-      </div>
+      <?php require 'views/histogram/histogramchart.php'; ?>
     </div>
   </body>
   <script>

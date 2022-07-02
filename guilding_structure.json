@@ -1,0 +1,10 @@
+{
+  "what_and_how_to_plot" : "2,1|3,2|4,2|5,3",
+  "graph_names" : "Histograma de edades|Frecuencia en preferencia de pierna|Escolaridad| Posición de juego",
+  "grid" : "2x2",
+  "rounded_corners" : "0|0.2|1|1",
+  "graph_and_table_space" : "6|12|8|6",
+  "data_resolution" : "1|2|1|0",
+  "tab" : "Analisis estatico|Analisis estatico|Analisis estatico|Analisis estatico",
+  "Popup" : "1|0|1|0"
+}
