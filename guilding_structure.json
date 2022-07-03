@@ -1,5 +1,5 @@
 {
-  "what_and_how_to_plot" : "2,1|3,2|4,2|5,3",
+  "what_and_how_to_plot" : "2,1|3,2|4,2|1,3",
   "graph_names" : "Histograma de edades|Frecuencia en preferencia de pierna|Escolaridad| Posición de juego",
   "grid" : "2x2",
   "rounded_corners" : "0|0.2|1|1",

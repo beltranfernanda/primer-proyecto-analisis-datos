@@ -1,6 +1,7 @@
 <?php
  
 include ('Graph.php');
+include ('GaussBellBuilder.php');
 
 class GraphForType {
 
@@ -37,8 +38,9 @@ class GraphForType {
         for ($i = 0; $i < $array_num; ++$i){
             switch ($graphs[$i]->getWhatPlot()) {
                 case self::GAUSS_BELL:
-                    echo "GAUSS_BELL";
-                    echo "<br>";
+                    $gaussBellBuilder = new GaussBellBuilder;
+                    $gaussBellBuilder->setGraph($graphs[$i]);
+                    $gaussBellBuilder->showGraph();
                     break;
                 case self::HISTOGRAM:
                     echo "HISTOGRAM";

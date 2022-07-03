@@ -1,33 +1,22 @@
 <?php
+include ('GraphBuilder.php');
 
 class GaussBellBuilder implements GraphBuilder {
 
-    public function setWhatToPlot($what){
+    private $graph;
 
+    public function setGraph($graph){
+        $this->graph = $graph;
     }
 
-    public function setGraphName($name){
-
-    }
-
-    public function setRoundedCorners($corner){
-
-    }
-
-    public function setGraphAndTable($graphSpace){
-
-    }
-
-    public function setDataResolution($resolution){
-
-    }
-
-    public function setTab($tab) {
-
-    }
-
-    public function setPopup($isPopup){
-
+    public function showGraph(){
+        echo '<div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Campana de Gauss</h5>
+                <canvas id="campanaGauss"></canvas>
+                <p id="textOfCampanaGauss" class="card-text">Gauss bell</p>
+            </div>
+        </div>';
     }
 }
 
