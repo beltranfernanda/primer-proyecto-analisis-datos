@@ -7,11 +7,9 @@ class Graph {
     private string $graphName = "";
     private string $roundedCorners = "";
     private string $graphSpace = "";
-    private string $dataResolution = "";
-    private string $tabToFilter = "";
-    private string $isPopupGraph = "";
+    private string $dataResolution = ""; // cantidad de decimales
 
-    public function setWhatAndHowToPlot($whatAndHowPlot){
+    public function setWhatAndHowToPlot($whatAndHowPlot) {
         $whatAndHowPlotExplode = explode(",", $whatAndHowPlot);
         $this->whatPlot = $whatAndHowPlotExplode[0];
         $this->howPlot = $whatAndHowPlotExplode[1];
@@ -31,14 +29,6 @@ class Graph {
     
     public function setDataResolution($resolution){
         $this->graphSpace = $resolution;
-    }
-
-    public function setTab($tab){
-        $this->tabToFilter = $tab;
-    }
-
-    public function setPopup($isPopup){
-        $this->isPopupGraph = $isPopup;
     }
 
     public function getWhatPlot(){
@@ -63,14 +53,6 @@ class Graph {
     
     public function getDataResolution(){
         return $this->graphSpace;
-    }
-
-    public function getTab(){
-        return $this->tabToFilter;
-    }
-
-    public function getPopup(){
-        return $this->isPopupGraph;
     }
 }
 ?>

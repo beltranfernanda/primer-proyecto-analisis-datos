@@ -17,6 +17,16 @@ class GaussBellBuilder implements GraphBuilder {
                 <p id="textOfCampanaGauss" class="card-text">Gauss bell</p>
             </div>
         </div>';
+
+        echo 'const dataEscolaridad = {
+            labels: lista,
+            datasets: [{
+                label: 'Graficar Escolaridad'+ graph->getGraphName(),
+                backgroundColor: 'rgb(255, 12, 50)',
+                borderColor: 'rgb(255, 12, 50)',
+                data: cantidades + ,
+            }]
+        };';
     }
 }
 
