@@ -7,7 +7,6 @@
     </form>
 <?php
     include 'GraphForType.php';
-
     if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload'){
     if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOAD_ERR_OK){
         $file = $_FILES['uploadedFile']['tmp_name'];
@@ -16,6 +15,7 @@
         $json_guiding_structure = json_decode($contents, true);
         $graphForType = new GraphForType;
         $graphForType->setGuildingStructure($json_guiding_structure);
+        $graphForType->showGraphsForType();
       }
     }
 ?>
