@@ -17,7 +17,7 @@ class Data{
 
         $data = array_count_values($values);
 
-        print_r($data);
+        //print_r($data);
         
         return $data;
     }

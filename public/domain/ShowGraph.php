@@ -23,7 +23,7 @@ class ShowGraph {
             '#999999',
         );
 
-        echo '<div class="card-body">';
+        echo '<div class="card-body centrar">';
         echo '<h2>'.$this->graph->getGraphName().'</h2>';
         $chart->setChartAttrs( array(
             'type' => $type,

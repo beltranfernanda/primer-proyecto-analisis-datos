@@ -14,8 +14,13 @@ class GraphForType {
     const SPARKLINE = "7";
 
     private $graphsForType = array();
+    public $fila = 0;
+
 
     public function setGuildingStructure($guildingStructureJson){
+        $grid = explode("x", $guildingStructureJson[0]['grid']);
+        $this->fila = intval($grid[0]);
+        
         $array_num = count($guildingStructureJson);
         for ($i = 0; $i < $array_num; $i++){
             $guildingStructure = new GuildingStructure;
@@ -36,7 +41,6 @@ class GraphForType {
 
     private function showGraphs($graphs){
         $array_num = count($graphs);
-        echo $array_num;
         for ($i = 0; $i < $array_num; $i++){
             $showGraph = new ShowGraph;
             $showGraph->setGraph($graphs[$i]);
@@ -67,7 +71,5 @@ class GraphForType {
             }
         }
     }
-
 }
-
 ?>
