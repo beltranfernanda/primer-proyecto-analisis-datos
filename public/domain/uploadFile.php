@@ -15,7 +15,7 @@
           $json_guiding_structure = json_decode($contents, true);
           $graphForType = new GraphForType;
           $graphForType->setGuildingStructure($json_guiding_structure);
-          echo '<div class="grid">';
+          echo '<div class="charts-container">';
             $graphForType->showGraphsForType();
           echo '</div>';
         }

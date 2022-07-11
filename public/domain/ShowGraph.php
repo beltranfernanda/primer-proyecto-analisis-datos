@@ -4,11 +4,11 @@ include( 'public/infraestructure/googleCharts/GoogChart.class.php');
 
 class ShowGraph {
 
-    private $graph;
+    private $graph; //type Graph.php
     private $chart;
     private $data;
     private $color;
-    private $grid;
+    private $grid; //columns
     const TOTAL_SPACE = 12;
 
     public function setGraph($graph){
@@ -47,40 +47,50 @@ class ShowGraph {
     }
 
     private function graphWhenNotShowTable($_type, $_dataContent){
-        echo '<div class="card-body centrar">';
-            echo '<h2>'.$this->graph->getGraphName().'</h2>';
-            $this->chart->setChartAttrs( array(
-                'type' => $_type,
-                'title' => $this->graph->getGraphName(),
-                'data' => $_dataContent,
-                'size' => array( 400, 300 ),
-                'color' => $this->color
-                ));
-
-            echo $this->chart;
+        $this->chart->setChartAttrs( array(
+            'type' => $_type,
+            'title' => $this->graph->getGraphName(),
+            'data' => $_dataContent,
+            'size' => array( 400, 300 ),
+            'color' => $this->color
+            ));
+        $border = $this->graph->getRoundedCorners() == '1' ? 'rounded-10' : '';
+        $width = 100 / $this->grid;
+        echo '<article class="chart-card-container" style="width: '.$width.'%;">';
+        echo '<div class="chart-card bg-white border '.$border.'">';
+            echo '<h2 class="chart-card__title">'.$this->graph->getGraphName().'</h2>';
+            echo '<div class="chart">';
+                echo $this->chart;
+            echo '</div>';
         echo '</div>';
+        echo '</article>';
     }
 
     private function graphWhenIsTable($_type, $_dataContent){
-        echo '<div class="card-body centrar">';
-            echo '<div class="row">';
+        $this->chart->setChartAttrs( array(
+        'type' => $_type,
+        'title' => $this->graph->getGraphName(),
+        'data' => $_dataContent,
+        'size' => array( 400, 300 ),
+        'color' => $this->color
+        ));
+        $border = $this->graph->getRoundedCorners() == '1' ? 'rounded-10' : '';
+        $width = 100 / $this->grid;
+        echo '<article class="chart-card-container" style="width: '.$width.'%;">';
+        echo '<div class="chart-card bg-white border '.$border.'">';
+            echo '<div class="row chart-card--with-table">';
                 echo '<div class="col-md-'.$this->graph->getGraphAndTable().'">';
-                    echo '<h2>'.$this->graph->getGraphName().'</h2>';
-                        $this->chart->setChartAttrs( array(
-                        'type' => $_type,
-                        'title' => $this->graph->getGraphName(),
-                        'data' => $_dataContent,
-                        'size' => array( 400, 300 ),
-                        'color' => $this->color
-                        ));
-
+                    echo '<h2 class="chart-card__title">'.$this->graph->getGraphName().'</h2>';
+                    echo '<div class="chart">';
                         echo $this->chart;
+                    echo '</div>';
                 echo '</div>';
-                echo '<div class="col-md-'.$this->calculateRestSpace($this->graph->getGraphAndTable()).'">';
+                echo '<div class=" table-container col-md-'.$this->calculateRestSpace($this->graph->getGraphAndTable()).'">';
                     $this->showTable($_dataContent);
                 echo '</div>';
             echo '</div>';
         echo '</div>';
+        echo '</article>';
     }
 
     private function showTable($_dataContent){

@@ -1,3 +1,48 @@
 .centrar {
     text-align: center;
 }
+
+.charts-container {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.chart-card-container {
+    padding: 0.5rem;
+}
+
+.chart-card {
+    padding: 1rem 0.5rem;
+}
+
+.chart-card--with-table {
+    padding-right: 0.5rem;
+}
+
+.chart-card__title {
+    text-align: center;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart img {
+    height: auto !important;
+    width: 100% !important;
+}
+
+.table-container {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.rounded-10 {
+    border-radius: 1rem;
+}
