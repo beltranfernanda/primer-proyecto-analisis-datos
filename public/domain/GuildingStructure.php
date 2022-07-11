@@ -27,6 +27,7 @@ class GuildingStructure {
         $rounded_corners = explode("|", $guildingStructureJson['rounded_corners']);
         $data_resolution = explode("|", $guildingStructureJson['data_resolution']);
         $tab = explode("|", $guildingStructureJson['tab']);
+        $graphSpace = explode("|", $guildingStructureJson['graph_and_table_space']);
 
         $array_num = count($what_and_how_to_plot);
         for ($i = 0; $i < $array_num; $i++) {
@@ -34,7 +35,7 @@ class GuildingStructure {
             $graph->setWhatAndHowToPlot($what_and_how_to_plot[$i]);
             $graph->setGraphName($graph_names[$i]);
             $graph->setRoundedCorners($rounded_corners[$i]);
-            $graph->setGraphAndTable($data_resolution[$i]);
+            $graph->setGraphAndTable($graphSpace[$i]);
             $this->graphs[$i] = $graph;
         }
     }

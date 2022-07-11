@@ -28,7 +28,7 @@ class Graph {
     }
     
     public function setDataResolution($resolution){
-        $this->graphSpace = $resolution;
+        $this->dataResolution = $resolution;
     }
 
     public function getWhatPlot(){
