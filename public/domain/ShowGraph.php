@@ -8,10 +8,15 @@ class ShowGraph {
     private $chart;
     private $data;
     private $color;
+    private $grid;
     const TOTAL_SPACE = 12;
 
     public function setGraph($graph){
         $this->graph = $graph;
+    }
+
+    public function setGrid($grid){
+        $this->grid = $grid;
     }
 
     private function initVariables(){
@@ -30,11 +35,11 @@ class ShowGraph {
         $this->initVariables();
         $dataContent = $this->data->getData(intval($this->graph->getWhatPlot())-1);
 
-        if($this->graph->getGraphAndTable() > 8){
+        if($this->graph->getGraphAndTable() > 8 || $this->grid > 2){
             $this->graphWhenNotShowTable($type, $dataContent);
         } else if ($this->graph->getGraphAndTable() <= 8){
             $this->graphWhenIsTable($type, $dataContent);
-        }
+        } 
     }
 
     private function calculateRestSpace(int $graphSpace){
@@ -81,8 +86,7 @@ class ShowGraph {
     private function showTable($_dataContent){
         $array_keys = array_keys($_dataContent);
         $array_data_size = count($array_keys);
-
-        echo '<table class="table table-striped">';
+        echo '<table class="table table-responsive">';
             echo '<thead>';
                 echo '<tr>';
                     echo '<th scope="col"> # </th>';

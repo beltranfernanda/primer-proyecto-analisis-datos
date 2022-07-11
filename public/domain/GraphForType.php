@@ -15,12 +15,14 @@ class GraphForType {
 
     private $graphsForType = array();
     public $fila = 0;
+    private $columns =0;
 
 
     public function setGuildingStructure($guildingStructureJson){
         $grid = explode("x", $guildingStructureJson[0]['grid']);
         $this->fila = intval($grid[0]);
-        
+        $this->columns = intval($grid[1]);
+
         $array_num = count($guildingStructureJson);
         for ($i = 0; $i < $array_num; $i++){
             $guildingStructure = new GuildingStructure;
@@ -43,6 +45,7 @@ class GraphForType {
         $array_num = count($graphs);
         for ($i = 0; $i < $array_num; $i++){
             $showGraph = new ShowGraph;
+            $showGraph->setGrid($this->columns);
             $showGraph->setGraph($graphs[$i]);
             switch ($graphs[$i]->getHowPlot()) {
                 case self::GAUSS_BELL:
