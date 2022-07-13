@@ -36,6 +36,7 @@ class GuildingStructure {
             $graph->setGraphName($graph_names[$i]);
             $graph->setRoundedCorners($rounded_corners[$i]);
             $graph->setGraphAndTable($graphSpace[$i]);
+            $graph->setDataResolution($data_resolution[$i]);
             $this->graphs[$i] = $graph;
         }
     }

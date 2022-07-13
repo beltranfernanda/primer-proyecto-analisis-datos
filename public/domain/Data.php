@@ -1,6 +1,6 @@
 <?php
-class Data{
 
+class Data{
     public function getData($whatData){
         $jsonDataService = $GLOBALS['jsonDataService'];
         $values = array();
@@ -16,11 +16,8 @@ class Data{
         }
 
         $data = array_count_values($values);
-
         //print_r($data);
-        
         return $data;
-    }
-    
+    }  
 }
 ?>

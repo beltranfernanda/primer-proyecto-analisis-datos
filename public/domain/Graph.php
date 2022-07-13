@@ -52,7 +52,7 @@ class Graph {
     }
     
     public function getDataResolution(){
-        return $this->graphSpace;
+        return $this->dataResolution;
     }
 }
 ?>

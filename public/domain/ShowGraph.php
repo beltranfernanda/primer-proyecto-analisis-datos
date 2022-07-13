@@ -88,6 +88,13 @@ class ShowGraph {
                 echo '<div class=" table-container col-md-'.$this->calculateRestSpace($this->graph->getGraphAndTable()).'">';
                     $this->showTable($_dataContent);
                 echo '</div>';
+                
+                $i = 0;
+                echo '<div>Data resolution</div>';
+                foreach ($_dataContent as $valores=>$value){
+                    echo '<div style="width:auto">'. number_format($value, $this->graph->getDataResolution()) . ' ' .'</div>';
+                    $i++;
+                }
             echo '</div>';
         echo '</div>';
         echo '</article>';
