@@ -52,7 +52,7 @@ class GraphForType {
                 }else{
                     echo '<div class="tab-pane fade" id="tab'.$j.'" role="tabpanel" aria-labelledby="tab'.$j.'">';
                 }
-                echo '<div class="charts-container">';
+                echo '<div class="charts-container bg-white border-start border-end border-bottom mb-3">';
                     $this->showGraphs($this->graphsForType[$j]->getGraphs());
                 echo '</div>';
                 echo '</div>';

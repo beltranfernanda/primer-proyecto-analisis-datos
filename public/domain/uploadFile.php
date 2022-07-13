@@ -1,4 +1,4 @@
-<div class="form-container border mt-3 mb-3">
+<div class="form-container border mt-3 mb-3 bg-white">
   <form method="POST" action="index.php" enctype="multipart/form-data">
     <div class="mb-3">
       <label for="formFile" class="form-label">Upload configuration file</label>
