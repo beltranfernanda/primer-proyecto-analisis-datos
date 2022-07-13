@@ -15,18 +15,9 @@
           $json_guiding_structure = json_decode($contents, true);
           $graphForType = new GraphForType;
           $graphForType->setGuildingStructure($json_guiding_structure);
-          echo '<div class="charts-container">';
-            $graphForType->showGraphsForType();
-          echo '</div>';
+            echo '<div class="charts-container">';
+              $graphForType->showGraphsForType();
+            echo '</div>';
         }
     }
 ?>
-
-<style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(<?php echo $graphForType->fila ?>, 1fr);
-    grid-gap: 40px;
-    grid-auto-rows: 400px;
-}
-</style>
