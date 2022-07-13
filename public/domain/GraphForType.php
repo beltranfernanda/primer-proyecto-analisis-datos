@@ -14,8 +14,11 @@ class GraphForType {
     const SPARKLINE = "7";
 
     private $graphsForType = array();
+    private $columns =0;
 
     public function setGuildingStructure($guildingStructureJson){
+        $grid = explode("x", $guildingStructureJson[0]['grid']);
+        $this->columns = intval($grid[1]);
         $array_num = count($guildingStructureJson);
         for ($i = 0; $i < $array_num; $i++){
             $guildingStructure = new GuildingStructure;
@@ -49,17 +52,19 @@ class GraphForType {
                 }else{
                     echo '<div class="tab-pane fade" id="tab'.$j.'" role="tabpanel" aria-labelledby="tab'.$j.'">';
                 }
-                $this->showGraphs($this->graphsForType[$j]->getGraphs());
+                echo '<div class="charts-container">';
+                    $this->showGraphs($this->graphsForType[$j]->getGraphs());
+                echo '</div>';
                 echo '</div>';
             }
             echo '</div>';
-        echo '</div>';
     }
 
     private function showGraphs($graphs){
         $array_num = count($graphs);
         for ($i = 0; $i < $array_num; $i++){
             $showGraph = new ShowGraph;
+            $showGraph->setGrid($this->columns);
             $showGraph->setGraph($graphs[$i]);
             switch ($graphs[$i]->getHowPlot()) {
                 case self::GAUSS_BELL:
