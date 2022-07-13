@@ -1,10 +1,12 @@
-<form method="POST" action="index.php" enctype="multipart/form-data">
-      <div>
-        <span>Upload a File:</span>
-        <input type="file" name="uploadedFile" />
-      </div><br>
-      <input type="submit" name="uploadBtn" value="Upload" />
-    </form>
+<div class="form-container border mt-3 mb-3">
+  <form method="POST" action="index.php" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Upload configuration file</label>
+      <input class="form-control" type="file" id="formFile" name="uploadedFile">
+    </div>
+    <input class="btn btn-primary" type="submit" name="uploadBtn" value="Upload">
+  </form>
+</div>
 <?php
     include 'GraphForType.php';
     if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload'){
