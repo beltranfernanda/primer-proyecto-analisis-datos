@@ -36,9 +36,32 @@ class GraphForType {
 
     public function showGraphsForType(){
         $array_num = count($this->graphsForType);
+        $array_num2 = count($this->graphsForType);
+        
+        echo '<ul class="nav nav-tabs" id="myTab" role="tablist">';
         for ($i = 0; $i < $array_num; $i++){
-            $this->showGraphs($this->graphsForType[$i]->getGraphs());
+            echo '<li class="nav-item" role="presentation">';
+            if($i == 0){
+                echo '<button class="nav-link active" id="pillstab'.$i.'" data-bs-toggle="pill" data-bs-target="#tab'.$i.'" type="button" role="tab" aria-controls="tab'.$i.'" aria-selected="true">'.$this->graphsForType[$i]->getTab().'</button>';
+            }else{
+                echo '<button class="nav-link" id="pills-tab'.$i.'" data-bs-toggle="pill" data-bs-target="#tab'.$i.'" type="button" role="tab" aria-controls="tab'.$i.'" aria-selected="false">'.$this->graphsForType[$i]->getTab().'</button>';
+            }
+            echo '</li>';
         }
+        echo '</ul>';
+
+
+        echo '<div class="tab-content" id="myTabContent">';
+        for ($j = 0; $j < $array_num2; $j++){
+            if($j == 0){
+                echo '<div class="tab-pane fade show active" id="tab'.$j.'" role="tabpanel" aria-labelledby="tab'.$j.'">';
+            }else{
+                echo '<div class="tab-pane fade" id="tab'.$j.'" role="tabpanel" aria-labelledby="tab'.$j.'">';
+            }
+            $this->showGraphs($this->graphsForType[$j]->getGraphs());
+            echo '</div>';
+        }
+        echo '</div>';
     }
 
     private function showGraphs($graphs){
