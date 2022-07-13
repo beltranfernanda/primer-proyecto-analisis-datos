@@ -7,4 +7,14 @@
   "data_resolution" : "1|1|2|1|0",
   "tab" : "Analisis estatico",
   "Popup" : "1"
+},
+{
+  "what_and_how_to_plot" : "3,3|4,4|5,5|6,6|7,7",
+  "graph_names" : "Fecha de nmto|Lateralidad|Posición de juego|Grado escolaridad| Raza",
+  "grid" : "2x2",
+  "rounded_corners" : "0|0|1|1|1",
+  "graph_and_table_space" : "6|6|12|8|6",
+  "data_resolution" : "1|1|2|1|0",
+  "tab" : "2nda grafica",
+  "Popup" : "1"
 }]
