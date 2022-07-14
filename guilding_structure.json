@@ -11,7 +11,7 @@
 {
   "what_and_how_to_plot" : "3,3|4,4|5,5|6,6|7,5",
   "graph_names" : "Fecha de nmto|Lateralidad|Posición de juego|Grado escolaridad| Raza",
-  "grid" : "2x2",
+  "grid" : "5x1",
   "rounded_corners" : "0|0|1|1|1",
   "graph_and_table_space" : "6|6|10|8|6",
   "data_resolution" : "1|1|2|1|0",

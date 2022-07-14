@@ -28,6 +28,8 @@ class GuildingStructure {
         $data_resolution = explode("|", $guildingStructureJson['data_resolution']);
         $tab = explode("|", $guildingStructureJson['tab']);
         $graphSpace = explode("|", $guildingStructureJson['graph_and_table_space']);
+        $grid = explode("x", $guildingStructureJson['grid']);
+        $columns = intval($grid[1]);
 
         $array_num = count($what_and_how_to_plot);
         for ($i = 0; $i < $array_num; $i++) {
@@ -37,6 +39,7 @@ class GuildingStructure {
             $graph->setRoundedCorners($rounded_corners[$i]);
             $graph->setGraphAndTable($graphSpace[$i]);
             $graph->setDataResolution($data_resolution[$i]);
+            $graph->setColumns($columns);
             $this->graphs[$i] = $graph;
         }
     }

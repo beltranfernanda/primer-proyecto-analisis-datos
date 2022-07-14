@@ -8,6 +8,7 @@ class Graph {
     private string $roundedCorners = "";
     private string $graphSpace = "";
     private string $dataResolution = ""; // cantidad de decimales
+    private int $columns = 1;
 
     public function setWhatAndHowToPlot($whatAndHowPlot) {
         $whatAndHowPlotExplode = explode(",", $whatAndHowPlot);
@@ -29,6 +30,14 @@ class Graph {
     
     public function setDataResolution($resolution){
         $this->dataResolution = $resolution;
+    }
+
+    public function setColumns($col){
+        $this->columns = $col;
+    }
+
+    public function getColumns(){
+        return $this->columns;
     }
 
     public function getWhatPlot(){
