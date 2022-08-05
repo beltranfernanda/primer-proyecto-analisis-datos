@@ -75,6 +75,16 @@
             <input class="form-control" style="text-align: center;" name="valorComparar" type="text" id="valorComparar" value="<?php echo $_POST['valorComparar']; ?>" />
           </div>
         </div>
+
+      <div class="row my-3">
+        <div class="col">
+          <?php require 'views/tiempo_cpk/tiempo_cpk_compare.php'; ?>
+        </div>
+        <div class="col">
+          <?php require 'views/tiempo_urea/tiempo_urea_compare.php'; ?>
+        </div>
+      </div>
+
         <div class="row my-3">
           <div class="col">
             <?php require 'views/gaussian_variables/gaussian_urea_to_compare.php'; ?>
@@ -113,6 +123,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./public/js/tiempo_cpk.js"></script>
 <script src="./public/js/tiempo_urea.js"></script>
+<script src="./public/js/tiempo_cpk_compare.js"></script>
+<script src="./public/js/tiempo_urea_compare.js"></script>
 <script src="./public/js/cpk_urea.js"></script>
 <script type="module" src="./public/js/gaussian_variables/gaussian_cpk.js"></script>
 <script type="module" src="./public/js/gaussian_variables/gaussian_urea.js"></script>
