@@ -54,7 +54,6 @@ export class NormalDistribution {
                 maxValue = parseInt(this.values[i])
             }
         }
-        console.log("Maximo valor " + maxValue);
         return maxValue
     }
 

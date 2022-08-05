@@ -44,26 +44,23 @@
         <div class="col">
           <?php require 'views/cpk_urea/cpk_urea.php'; ?>
         </div>
-        <div class="col">
-          <!-- <?php require 'views/cpk_urea/cpk_urea.php'; ?> -->
-        </div>
       </div>
 
       <div class="row my-3">
-        <div class="col-6">
+        <div class="col-7">
           <?php require 'views/gaussian_variables/gaussian_urea.php'; ?>
         </div>
-        <div class="col-6">
-          <!--  -->
+        <div class="col-5">
+          <?php require 'views/gaussian_variables/gaussian_urea_table.php'; ?>
         </div>
       </div>
 
       <div class="row my-3">
-        <div class="col-6">
+        <div class="col-7">
           <?php require 'views/gaussian_variables/gaussian_cpk.php'; ?>
         </div>
-        <div class="col-6">
-          <!--  -->
+        <div class="col-5">
+          <?php require 'views/gaussian_variables/gaussian_cpk_table.php'; ?>
         </div>
       </div>
     </div>

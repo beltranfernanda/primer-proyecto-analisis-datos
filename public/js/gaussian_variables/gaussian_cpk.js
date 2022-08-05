@@ -28,3 +28,7 @@ const myChartGaussBell = new Chart(
   document.getElementById('gaussian_cpk'),
   configGaussBell
 );
+
+document.getElementById('average_cpk').innerHTML = normalDistribution.calculateAverage()
+document.getElementById('variance_cpk').innerHTML = normalDistribution.calculateVariance()
+document.getElementById('std_deviation_cpk').innerHTML = normalDistribution.calculateStandardDeviation()

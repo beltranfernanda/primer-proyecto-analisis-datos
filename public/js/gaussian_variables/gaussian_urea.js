@@ -28,3 +28,7 @@ const myChartGaussBell = new Chart(
   document.getElementById('gaussian_urea'),
   configGaussBell
 );
+
+document.getElementById('average_urea').innerHTML = normalDistribution.calculateAverage()
+document.getElementById('variance_urea').innerHTML = normalDistribution.calculateVariance()
+document.getElementById('std_deviation_urea').innerHTML = normalDistribution.calculateStandardDeviation()
