@@ -7,38 +7,19 @@
   <body class="bg-light">
     <?php require 'views/navbar/navbar.php'; ?>
     <div class="container my-3">
-      <h2 class="display-4">Charts</h2>
+      <h2 class="display-4">Chronogram of activities</h2>
       <!-- Inicio primera fila-->
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views/histogram/histogramchart.php'; ?>
-        </div>
-        <!-- Inicio segunda columna-->
-        <div class="col">
-          <?php require 'views/lateralidad/lateralidadchart.php'; ?>
+          <?php require 'views/programmedGantt/programmedGantt.php'; ?>
         </div>
       </div>
       <!-- Inicio segunda fila-->
       <div class="row my-3">
         <!-- Inicio primer columna-->
         <div class="col">
-          <?php require 'views/campanaGauss/campanaGauss.php'; ?>
-        </div>
-        <!-- Inicio segunda columna-->
-        <div class="col">
-          <?php require 'views/raza/raza.php'; ?>
-        </div>
-      </div>
-      <!-- Inicio tercera fila-->
-      <div class="row my-3">
-        <!-- Inicio primer columna-->
-        <div class="col">
-          <?php require 'views/escolaridad/escolaridadchart.php'; ?>
-        </div>
-        <!-- Inicio segunda columna-->
-        <div class="col">
-          <?php require 'views/posicion/posicionchart.php'; ?>
+          <?php require 'views/realGantt/realGantt.php'; ?>
         </div>
       </div>
     </div>
@@ -53,13 +34,11 @@
   <!--Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  <!-- Chart js-->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./public/js/lateralidad.js"></script>
-  <script type="module" src="./public/js/histogram.js"></script>
-  <script type="module" src="./public/js/campanaGauss/campanaGauss.js"></script>
-  <script src="./public/js/posicion.js"></script>
-  <script src="./public/js/raza.js"></script>
-  <script src="./public/js/escolaridad.js"></script>
+  <!-- Highcharts js-->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/gantt/modules/gantt.js"></script>
+  <!-- libs -->
+  <script src="./public/js/programmedGantt.js"></script>
+  <script src="./public/js/realGantt.js"></script>
 
 </html>
