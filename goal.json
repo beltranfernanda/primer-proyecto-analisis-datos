@@ -1,0 +1,55 @@
+{
+
+    "programmed": {
+        "name": "POLO - PSICOPEDAGOGICO 2023",
+        "start": "2022-07-06T00:00:00.000Z",
+        "end": "2022-07-21T00:00:00.000Z",
+        "milestone": {
+            "name": "Entrega",
+            "deadline": "2022-07-21T00:00:00.000Z"
+        },
+        "subtasks": [
+            {
+                "name": "Corte - Orange Corp",
+                "start": "2022-07-06T00:00:00.000Z",
+                "end": "2022-07-21T00:00:00.000Z"
+            },
+            {
+                "name": "Estampado - Orange Corp",
+                "start": null,
+                "end": null
+            },
+            {
+                "name": "Fusionado - Unique SAS",
+                "start": "2022-07-06T00:00:00.000Z",
+                "end": "2022-07-21T00:00:00.000Z"
+            }
+        ]
+    }, 
+    "real": {
+        "name": "POLO - PSICOPEDAGOGICO 2023",
+        "start": "2022-07-06T00:00:00.000Z",
+        "end": "2022-07-21T00:00:00.000Z",
+        "milestone": {
+            "name": "Entrega",
+            "deadline": "2022-07-21T00:00:00.000Z"
+        },
+        "subtasks": [
+            {
+                "name": "Corte - Orange Corp",
+                "start": "2022-07-06T00:00:00.000Z",
+                "end": "2022-07-21T00:00:00.000Z"
+            },
+            {
+                "name": "Estampado - Orange Corp",
+                "start": null,
+                "end": null
+            },
+            {
+                "name": "Fusionado - Unique SAS",
+                "start": "2022-07-06T00:00:00.000Z",
+                "end": "2022-07-21T00:00:00.000Z"
+            }
+        ]
+    }
+}

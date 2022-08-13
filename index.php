@@ -6,6 +6,12 @@
   </head>
   <body class="bg-light">
     <?php require 'views/navbar/navbar.php'; ?>
+    <?php 
+      include ('utils/csvParser.php');
+      $data = CsvParser::readCsv("02_CronogramActs-b.csv");
+      // var_dump($data);
+      print_r($data);
+    ?>
     <div class="container my-3">
       <h2 class="display-4">Chronogram of activities</h2>
       <!-- Inicio primera fila-->
