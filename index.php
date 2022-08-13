@@ -6,12 +6,6 @@
   </head>
   <body class="bg-light">
     <?php require 'views/navbar/navbar.php'; ?>
-    <?php 
-      include ('utils/csvParser.php');
-      $data = CsvParser::readCsv("02_CronogramActs-b.csv");
-      // var_dump($data);
-      print_r($data);
-    ?>
     <div class="container my-3">
       <h2 class="display-4">Chronogram of activities</h2>
       <!-- Inicio primera fila-->
@@ -31,10 +25,11 @@
     </div>
   </body>
   <script>
-    const responseService = <?php
-      $data = file_get_contents("http://evalua.fernandoyepesc.com/04_Modules/11_Evalua/10_WS/ws_evitems.php?&eboxid=89");
-      $json_data = json_decode($data, true);
-      echo json_encode($json_data);
+    const schedules = <?php
+      include ('useCases/schedule.php');
+      $schedule = new Schedule();
+      $scheduleDTO = $schedule->getScheduleDTO();
+      echo json_encode($scheduleDTO);
       ?>;
   </script>
   <!--Bootstrap-->

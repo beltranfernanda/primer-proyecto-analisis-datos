@@ -1,14 +1,14 @@
 <?php
 
-class Subtask {
+class Subtask implements JsonSerializable {
     private $name; //string
-    private $start; //DateTime
-    private $end; //DateTime
+    private $start; //string (date ISO string)
+    private $end; //string (date ISO string)
 
     function __construct($name, $start, $end) {
         $this->name = $name;
-        $this->start = new DateTime($start);
-        $this->end = new DateTime($end);
+        $this->start = $this->validateDate($start);
+        $this->end = $this->validateDate($end);
     }
 
     public function getName() {
@@ -16,11 +16,27 @@ class Subtask {
     }
 
     public function getStart() {
-        return $this->start->format(DateTime::ATOM);
+        return $this->start;
+    }
+    
+    public function getEnd() {
+        return $this->end;
+    }
+    
+    public function jsonSerialize() {
+        return [
+            'name' => $this->getName(),
+            'start' => $this->getStart(),
+            'end' => $this->getEnd()
+        ];
     }
 
-    public function getEnd() {
-        return $this->end->format(DateTime::ATOM);
+    private function validateDate($strDate) {
+        if($strDate == "NA" || $strDate == "") {
+            return null;
+        }
+        $temp = DateTime::createFromFormat('d/m/y', $strDate);
+        return $temp->format(DateTime::ATOM);
     }
     
 }

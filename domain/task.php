@@ -1,6 +1,6 @@
 <?php
 
-class Task {
+class Task implements JsonSerializable {
     private $name; //string
     private $start; //DateTime
     private $end; //DateTime
@@ -9,8 +9,8 @@ class Task {
 
     function __construct($name, $start, $end, $milestone, $subtasks) {
         $this->name = $name;
-        $this->start = new DateTime($start);
-        $this->end = new DateTime($end);
+        $this->start = DateTime::createFromFormat('d/m/y', $start);
+        $this->end = DateTime::createFromFormat('d/m/y', $end);
         $this->milestone = $milestone;
         $this->subtasks = $subtasks;
     }
@@ -35,6 +35,15 @@ class Task {
         return $this->subtasks;
     }
     
+    public function jsonSerialize() {
+        return [
+            'name' => $this->getName(),
+            'start' => $this->getStart(),
+            'end' => $this->getEnd(),
+            'milestone' => $this->getMilestone(),
+            'subtasks' => $this->getSubtasks(),
+        ];
+    }
 }
 
 ?>
