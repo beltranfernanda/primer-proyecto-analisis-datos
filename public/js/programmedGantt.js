@@ -1,32 +1,45 @@
 // THE CHART
+
+var programmedSubTask = []
+
+for(let i = 0; i<schedules.programmed.subtasks.length; i++){
+    const ob = {
+        id: ''+i,
+        name: schedules.programmed.subtasks[i].name,
+        start:  schedules.programmed.subtasks[i].start? Date.parse(schedules.programmed.subtasks[i].start): undefined,
+        end: schedules.programmed.subtasks[i].end? Date.parse(schedules.programmed.subtasks[i].end): undefined
+    }
+    this.programmedSubTask.push(ob);
+}
+
+for(let i = 1; i< this.programmedSubTask.length; i++){
+    let dependency = undefined;
+    let j = i-1;
+    while(dependency === undefined && j>-1){
+        if(
+            this.programmedSubTask[j].end !== undefined && 
+            this.programmedSubTask[i].start !== undefined && 
+            this.programmedSubTask[i].start >= this.programmedSubTask[j].end
+        ){
+            dependency = this.programmedSubTask[j].id;   
+        }
+        j--;
+    };
+    this.programmedSubTask[i].dependency = dependency;
+}
+
+
 Highcharts.ganttChart('programmedGantt', {
     title: {
-        text: 'Simple Gantt Chart'
+        text: schedules.programmed.name
+    },
+    xAxis: {
+        min: Date.parse(schedules.programmed.start),
+        max: Date.parse(schedules.programmed.end)
     },
         
     series: [{
         name: 'Project 1',
-        data: [{
-        		id: 's',
-            name: 'Start prototype',
-            start: Date.UTC(2014, 10, 18),
-            end: Date.UTC(2014, 10, 20)
-        }, {
-        		id: 'b',
-            name: 'Develop',
-            start: Date.UTC(2014, 10, 20),
-            end: Date.UTC(2014, 10, 25),
-            dependency: 's'
-        }, {
-        		id: 'a',
-            name: 'Run acceptance tests',
-            start: Date.UTC(2014, 10, 23),
-            end: Date.UTC(2014, 10, 26)
-        }, {
-            name: 'Test prototype',
-            start: Date.UTC(2014, 10, 27),
-            end: Date.UTC(2014, 10, 29),
-            dependency: ['a', 'b']
-        }]
+        data: this.programmedSubTask
     }]
 });
